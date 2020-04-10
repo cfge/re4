@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Resident Evil</title>
+	<style type="text/css">
+		.kill{
+			height: 50px;
+			width: 100px;
+			background: black;
+			position: absolute;
+			left: 850px;
+			top: 800px;
+			border: none;
+			color: red;
+			font-size: 30px;
+			font-weight: bold;
+
+		}
+		.save{
+			height: 50px;
+			width: 100px;
+			background: black;
+			position: absolute;
+			left: 950px;
+			top: 800px;
+			border: none;
+			color: red;
+			font-size: 30px;
+			font-weight: bold;
+
+		}
+		.bg{
+			background-image: url(bg10.png);
+			position: absolute;
+			width: 1900px;
+			height: 900px
+		}
+		
+	</style>
+</head>
+<body class="bg">
+
+
+	<button class="kill">KILL</button>
+
+	</div>
+	<script type="text/javascript">
+		let dead = function(){
+			alert("YOU LOSE")
+			bg.style.backgroundImage = "url(dead.png)"
+			kill.style.display = "none"
+			save.style.display = "none"
+		}
+		let bg = document.querySelector(".bg");
+		let kill = document.querySelector(".kill");
+		kill.onclick = function () {
+			alert("YOU WIN")
+			bg.style.backgroundImage = "url(bax.png)"
+			kill.style.display = "none"
+			save.style.display = "none"
+		}
+
+		setTimeout(dead, 3000)
+	</script>
+</body>
+</html>

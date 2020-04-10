@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Resident Evil</title>
+	<style type="text/css">
+		.begin{
+			height: 50px;
+			width: 100px;
+			background: black;
+			position: absolute;
+			left: 900px;
+			top: 800px;
+			border: none;
+			color: red;
+			font-size: 30px;
+			font-weight: bold;
+			display: none
+		}
+		.bg{
+			background-image: url(bg2.png);
+			position: absolute;
+			width: 1900px;
+			height: 900px
+		}
+
+
+
+	</style>
+</head>
+<body class="bg">
+	
+	
+	<button class="begin">GO</button>
+	<script type="text/javascript">
+		let bg = document.querySelector(".bg");
+
+		bg.onclick = function () {
+			bg.style.backgroundImage = "url(bg3.png)"
+			alert("YOU WIN")
+		}
+		
+	</script>
+</body>
+</html>

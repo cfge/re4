@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Resident Evil</title>
+	<style type="text/css">
+		.bg{
+			background-image: url(https://i.pinimg.com/originals/eb/1d/b2/eb1db201ab04373dc26c5952561dcbd3.jpg);
+			position: absolute;
+		}
+		.begin{
+			height: 50px;
+			width: 100px;
+			background: black;
+			position: absolute;
+			left: 900px;
+			top: 800px;
+			border: none;
+			color: red;
+			font-size: 30px;
+			font-weight: bold;
+			
+		}
+
+	</style>
+</head>
+<body class="bg">
+	<button class="begin">BEGIN</button>
+	
+	<script type="text/javascript">
+		let begin = document.querySelector(".begin");
+		let perehod = function(){
+			document.location.href = "re2.html"
+		}
+		begin.onclick = function(){
+			let audio = new Audio();
+			audio.src = 'Resident_Evil (mp3cut.net).mp3';
+			audio.autoplay = true;
+			if (audio.autoplay == true) {
+				setTimeout(perehod, 3000)
+			}
+			
+		}
+		
+	</script>
+</body>
+</html>

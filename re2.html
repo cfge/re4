@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Resident Evil</title>
+	<style type="text/css">
+		.begin{
+			height: 50px;
+			width: 100px;
+			background: black;
+			position: absolute;
+			left: 900px;
+			top: 800px;
+			border: none;
+			color: red;
+			font-size: 30px;
+			font-weight: bold;
+			display: none
+		}
+		.bg{
+			background-image: url(безымянный.png);
+			position: absolute;
+			width: 1900px;
+			height: 900px
+		}
+		.begin{
+			height: 50px;
+			width: 100px;
+			background: black;
+			left: 900px;
+			top: 800px;
+			border: none;
+			color: red;
+			font-size: 30px;
+			font-weight: bold;
+			
+		}
+		.zombie{
+			width: 160px;
+			height: 600px
+		}
+		.ammo{
+			font-family: arial;
+			color: grey;
+			text-align: center;
+			padding-top: 0px;
+
+		}
+		.ammobox{
+			
+			width: 150px;
+			left: 1700px;
+			top: 800px;
+			position: absolute;
+			height: 55px;
+			padding-top: 0px;
+			opacity: 85%
+		}
+		.hp_j{
+			font-family: arial;
+			color: grey;
+			text-align: center;
+			position: absolute;
+			top: 	800px
+		}
+		.bonus{
+			left: 726px;
+			top: 503px;
+			position: absolute;
+		}
+	</style>
+</head>
+<body class="bg">
+	<img src="ammo.png" class="bonus">
+	<img src="zombie.png" class="zombie" style="margin-left: 900px;margin-top: 300px">
+	<h1 class="hp_j">100</h1>
+	<button class="begin">GO</button>
+	<div class="ammobox">
+	
+	<h1 class="ammo">15</h1>
+	</div>
+	<script type="text/javascript">
+		let dead = function(){
+			alert("YOU LOSE")
+			bg.style.backgroundImage = "url(dead.png)"
+			kill.style.display = "none"
+			save.style.display = "none"
+		}
+		let begin = document.querySelector(".begin");
+		let bonus = document.querySelector(".bonus");
+		let hp_z = 100;
+		let dmg = function(){
+			let rand = Math.random(10) * 40;
+			let round = Math.round(rand);
+			return round
+		}
+		let ammo = document.querySelector(".ammo");
+		let num = 100;
+		let hp_j = document.querySelector(".hp_j")
+		let ammos = 15;
+		ammo.innerHTML = ammos;
+		hp_j.innerHTML = num;
+		let zombie = document.querySelector(".zombie");
+
+		hp_j.innerHTML = num
+		let perehod = function(){
+			document.location.href = "re3.html"
+		}
+		let death = function(){
+			zombie.style.display = "none"
+			begin.style.display = "block"
+
+		}
+		zombie.onclick = function(){
+			let audio = new Audio();
+			audio.src = '01664 (mp3cut.net).mp3';
+			audio.autoplay = true;
+			ammos = ammos - 1
+			ammo.innerHTML = ammos;
+			hp_z = hp_z - dmg();
+			if (hp_z <= 0) {
+				setTimeout(death, 0)
+
+			}
+		}
+		begin.onclick = function(){
+			document.location.href = "re3.html"
+		}
+		bonus.onclick = function(){
+			ammos = ammos + 10;
+			ammo.innerHTML = ammos;
+			bonus.style.display = "none"
+		}
+		
+	</script>
+</body>
+</html>

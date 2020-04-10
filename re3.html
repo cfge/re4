@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Resident Evil</title>
+	<style type="text/css">
+		.begin{
+			height: 50px;
+			width: 100px;
+			background: black;
+			position: absolute;
+			left: 900px;
+			top: 800px;
+			border: none;
+			color: red;
+			font-size: 30px;
+			font-weight: bold;
+			display: none
+		}
+		.bg{
+			background-image: url(bg.png);
+			position: absolute;
+			width: 1900px;
+			height: 900px
+		}
+		.left{
+			height: 50px;
+			width: 100px;
+			background: black;
+			left: 0px;
+			top: 400px;
+			border: none;
+			color: red;
+			font-size: 30px;
+			font-weight: bold;
+			position: absolute;
+		}
+		.right{
+			height: 50px;
+			width: 100px;
+			background: black;
+			left: 1800px;
+			top: 400px;
+			border: none;
+			color: red;
+			font-size: 30px;
+			font-weight: bold;
+			position: absolute;
+		}
+		.zombie{
+			width: 160px;
+			height: 600px
+		}
+		.ammo{
+			font-family: arial;
+			color: grey;
+			text-align: center;
+			padding-top: 0px;
+
+		}
+		.ammobox{
+			
+			width: 150px;
+			left: 1700px;
+			top: 800px;
+			position: absolute;
+			height: 55px;
+			padding-top: 0px;
+			opacity: 85%
+		}
+		.hp_j{
+			font-family: arial;
+			color: grey;
+			text-align: center;
+			position: absolute;
+			top: 	800px
+		}
+		.bonus{
+			left: 726px;
+			top: 503px;
+			position: absolute;
+		}
+	</style>
+</head>
+<body class="bg">
+	
+	
+	
+	<button class="left">Left</button>
+	<button class="right">Right</button>
+	
+	<script type="text/javascript">
+		let left = document.querySelector(".left");
+		let right = document.querySelector(".right");
+		left.onclick = function(){
+			document.location.href = "re4.html"
+		}
+		right.onclick = function(){
+			document.location.href = "re5.html"
+		}
+		
+	</script>
+</body>
+</html>
